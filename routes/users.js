@@ -5,6 +5,8 @@ const multer = require('multer');
 const {storage} = require('../cloudinary');
 const upload = multer({storage});
 
+router.get('/', users.index);
+
 router.route('/input')
       .get(users.add)
       .post(upload.array('resume'),users.addIn)

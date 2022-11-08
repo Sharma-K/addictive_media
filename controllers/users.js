@@ -1,5 +1,8 @@
 const User = require('../models/users');
 
+module.exports.index = async(req, res) => {
+  res.render('index');
+}
 
 module.exports.add = async(req, res) => {
 
