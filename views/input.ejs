@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/search.css">
+</head>
+
+<body>
+    <h1>Input</h1>
+
+    <a href="/listing">Go back to all lists</a>
+    <br>
+    <br>  
+    <div>
+    <form action ="/input" method="post" enctype="multipart/form-data">
+
+<input type="text" placeholder="name" name="name" id="name">
+<input type="date" name="dob" id="dob">
+<!-- <input type="text" placeholder="country" name="country" id="country" list="country"> -->
+<div class="wrapper">
+  
+    <div class="search-input">
+      <input id="search-box" onkeyup="sendData(this)" type="text" placeholder="Country" aria-label="Search" name="country" >
+
+      <div id="autocom-box" class="autocom-box">
+      <ul></ul>
+      </div>
+    </div>
+  </div>
+<input type="file" id="resume" name="resume">
+
+<button>Submit</button>
+    </form>
+  </div>
+
+    <script src="javascripts/search.js"></script>
+    <script src="javascripts/seed.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addictive Media</title>
+</head>
+<body>
+    <h1>Listing</h1>
+
+
+    <a href="/input">Add a data</a>
+    <br>
+    <br>
+    <label for="filter">Sort By</label>
+   
+    
+    <form action="/sortd" method="get" onsubmit="sortf(this)">
+        <button id="sortd"  value="d">Sort By Newest to Oldest</button>
+        
+    </form>
+    <form action="/sortn" method="get">
+    <button id="sortn" value="n">Sort By Name</button>
+    </form>
+    <% for(let user of allUsers) {%>
+       
+       <div>
+        <h4><%=user.name %> </h4>
+        <p><%=user.dob  %> </p>
+        <p><%= user.country %> </p>
+        <a href="<%=user.resume[0].url%>" target="_blank">Resume</a>
+        <form action="<%=user._id%>/delete" method="post">
+            <button>Delete</button>
+        </form>
+       </div>
+
+        <% } %> 
+
+
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script>
+    function sortf(v)
+    {
+        $.ajax({
+    url: '/sort',
+    data: { "value": v.value },
+    type: 'get'
+})
+    }
+</script>
+
+</html>
