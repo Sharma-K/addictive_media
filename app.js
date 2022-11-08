@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 const userRoutes = require('./routes/users');
 const path = require('path');
 const port = process.env.PORT || 3000;
-const dbUrl = 'mongodb://localhost:27017/Additive';
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/Additive';
 // const sort = require('sort');
 
 main().catch(err => console.log(err));
