@@ -12,6 +12,8 @@ const userRoutes = require('./routes/users');
 const path = require('path');
 const port = process.env.PORT || 3000;
 const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/Additive';
+
+console.log(dbUrl);
 // const sort = require('sort');
 
 main().catch(err => console.log(err));
