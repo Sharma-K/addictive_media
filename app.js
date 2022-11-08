@@ -13,12 +13,12 @@ const path = require('path');
 const port = process.env.PORT || 3000;
 const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/Additive';
 
-console.log(dbUrl);
+// console.log(dbUrl);
 // const sort = require('sort');
 
 main().catch(err => console.log(err));
 async function main(){
-    await mongoose.connect(dbUrl);
+    await mongoose.connect(dbUrl, {useNewUrlParser: true});
     console.log('database connected');
 }
 app.engine('ejs', ejsMate);
