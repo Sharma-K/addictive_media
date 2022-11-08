@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Addictive Media</title>
+    <link rel="stylesheet" href="stylesheets/search.css">
 </head>
 <body>
-    <h1>Listing</h1>
-
-
+    <h1 style="text-align: center;">Listing</h1>
     <a href="/input">Add a data</a>
+<div class="l-con">
+   
     <br>
     <br>
     <label for="filter">Sort By</label>
    
+    <div>
     
     <form action="/sortd" method="get" onsubmit="sortf(this)">
         <button id="sortd"  value="d">Sort By Newest to Oldest</button>
@@ -23,20 +25,23 @@
     <form action="/sortn" method="get">
     <button id="sortn" value="n">Sort By Name</button>
     </form>
+</div>
+<ul>
     <% for(let user of allUsers) {%>
-       
-       <div>
-        <h4><%=user.name %> </h4>
+      
+       <li>
+        <h1><%=user.name %> </h4>
         <p><%=user.dob  %> </p>
         <p><%= user.country %> </p>
         <a href="<%=user.resume[0].url%>" target="_blank">Resume</a>
         <form action="<%=user._id%>/delete" method="post">
             <button>Delete</button>
         </form>
-       </div>
+       </li>
 
         <% } %> 
-
+</ul>
+    </div>
 
 </body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>

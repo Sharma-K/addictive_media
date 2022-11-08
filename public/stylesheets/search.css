@@ -1,21 +1,68 @@
+.in-con{
+  /* background-color: pink; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.l-con{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.cont{
+  /* background-color: green; */
+  width: 300px;
+}
+.con{
+  margin-top: 20px;
+  /* background-color: cyan; */
+}
+
+a{
+  font-size: 30px;
+}
+
 .wrapper{
-    max-width: 400px;
-    margin: 150px auto;
+  border: 2px solid black;
+  border-radius: 5px;
+    width: 300px;
+    height: auto;
+    
+  }
+
+  .submit{
+    margin-top: 50px;
+    width: 300px;
+    height: 70px;
+    font-size: 50px;
+  }
+
+  input{
+    
+    height: 37px;
+ width: auto;
+ 
+    border-radius: 5px;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+
   }
   .wrapper .search-input{
     background: #fff;
-    width: 100%;
+    width: 300px;
+    height: auto;
     border-radius: 5px;
     position: relative;
     box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
   }
   .search-input input{
-    height: 55px;
+   
+    height: 40px;
  width: auto;
- outline: none;
  border: none;
-    outline: none;
-    border: none;
+ outline: none;
     border-radius: 5px;
     padding: 0 60px 0 20px;
     font-size: 18px;
@@ -27,9 +74,11 @@
   .search-input .autocom-box{
     padding: 0;
     opacity: 0;
+   
     pointer-events: none;
     max-height: 280px;
     overflow-y: auto;
+    overflow-x: hidden;
   }
   .search-input.active .autocom-box{
     padding: 10px 8px;
@@ -50,18 +99,7 @@
   .autocom-box li:hover{
     background: #efefef;
   }
-  .search-input .icon{
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    height: 55px;
-    width: 55px;
-    text-align: center;
-    line-height: 55px;
-    font-size: 20px;
-   
-    cursor: pointer;
-  }
+  
 
   .idx{
    width: 100%;

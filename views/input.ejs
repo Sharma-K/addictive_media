@@ -4,23 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Addictive Media</title>
     <link rel="stylesheet" href="stylesheets/search.css">
 </head>
 
 <body>
-    <h1>Input</h1>
+    <h1 style="text-align: center;">Input</h1>
 
+    <div >
     <a href="/listing">Go back to all lists</a>
-    <br>
-    <br>  
-    <div>
+   
+    <div class="in-con">
+      
+      <div class="cont">
     <form action ="/input" method="post" enctype="multipart/form-data">
+      <div class="con" >
+      Name:<input type="text" placeholder="name" name="name" id="name">
+    </div>
+      <div class="con" >
+DOB:<input type="date" name="dob" id="dob">
+</div>
+<br>
 
-<input type="text" placeholder="name" name="name" id="name">
-<input type="date" name="dob" id="dob">
 <!-- <input type="text" placeholder="country" name="country" id="country" list="country"> -->
-<div class="wrapper">
+Country
+<div class="wrapper" style="margin-top: 20px;">
   
     <div class="search-input">
       <input id="search-box" onkeyup="sendData(this)" type="text" placeholder="Country" aria-label="Search" name="country" >
@@ -30,10 +38,17 @@
       </div>
     </div>
   </div>
+  <div  class="con" > 
+    Resume:
 <input type="file" id="resume" name="resume">
 
-<button>Submit</button>
+</div>
+
+
+<button class="submit">Submit</button>
     </form>
+    </div>
+    </div>
   </div>
 
     <script src="javascripts/search.js"></script>
